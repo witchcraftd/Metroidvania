@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool facingRight = true;
 
-    //variaveis para mexer
+    //variaveis para movimento
     public float speed = 2.0f;
     public float movHorizontal;
 
