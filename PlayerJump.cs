@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     //criar forca, aplicar forca, 1x
-    //varivel para jumpForce
     [Header("PublicVars")]
     public float jumpForce;
     public bool grounded; //checar se esta no chao
@@ -21,7 +20,7 @@ public class PlayerJump : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void Update() //reconhecendo o input para pular
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, radOCircle, whatIsGround);
         if(Input.GetButtonDown("Jump") && grounded)
@@ -32,6 +31,6 @@ public class PlayerJump : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(groundCheck.position, radOCircle);
+        Gizmos.DrawSphere(groundCheck.position, radOCircle); //gizmos para reconhecer quando estiver tocando o chao (ground)
     }
 }
