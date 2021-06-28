@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
 
     //variaveis para movimento
-    public float speed = 2.0f;
+    public float speed = 1.0f;
     public float movHorizontal;
 
     private void Start()
